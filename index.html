@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      box-sizing: border-box;
+      font-family: cursive;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .container{
+      height: 100vh;
+      display: flex;
+      place-items: center;
+      justify-content: center;
+      
+    }
+    main{
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      box-shadow: 3px 3px 10px black;
+      border-radius: 10px
+      
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+    }
+    .left-section{
+      padding: 1em;
+      
+      /* background-color: blueviolet; */
+    }
+    .sidebar{
+      
+      height: 100%;
+      width: 100%;
+      background: url('./assets/images/bg-sidebar-desktop.svg') no-repeat top left;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      border-radius: 10px;
+      
+    }
+    .sidebar__step{
+      color: white;
+      display: flex;
+      gap: 1em;
+    }
+    .right-section-container{
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      padding: 2em;
+    }
+    .right-top{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    h1{
+      padding: 0;
+      margin: 0;
+    }
+    p{
+      padding: 0;
+      margin: 0;
+    }
+    .right-section{
+      background-color: white;
+      padding: 2em;
+    }
+    .form{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+    }
+    button{
+      background-color: rgb(0, 38, 255);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5em;
+      font-size: 1rem;
+      transition: all 0.3s ease-in;
+      display: flex;
+      width: max-content;
+      place-self: flex-end;
+    }
+    button:hover{
+      background-color: white;
+      outline: solid 1px rgb(0, 38, 255);
+      cursor: pointer;
+      color: black;
+    }
+    .sidebar__step__number{
+      
+      color: rgb(255, 255, 255);
+      border-radius: 50%;
+      width: 2em;
+      height: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid white 2px;
+      transition: all 0.3s ease-in;
+      
+    }
+    .sidebar__step__number:hover{
+      background-color: rgb(154, 196, 222);
+      color: blue;
+      cursor: pointer;
+    }
+    input{
+      border: solid 1px rgb(209, 203, 203);
+      border-radius: 5px;
+      padding: 0.5em;
+      font-size: 1rem;
+    }
+    input:focus{
+      outline: none;
+      border: solid 1px blueviolet;
+    }
+    label{
+      font-size: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar start -->
+<div class="container">
+  <main>
+    <div class="left-section">
+      <div class="sidebar">
+        <div class="sidebar__step">
+          <div class="sidebar__step__number">1</div>
+          <div class="sidebar__step__text">Your info</div>
+        </div>
+        <div class="sidebar__step">
+          <div class="sidebar__step__number">2</div>
+          <div class="sidebar__step__text">Select plan</div>
+        </div>
+        <div class="sidebar__step">
+          <div class="sidebar__step__number">3</div>
+          <div class="sidebar__step__text">Add-ons</div>
+        </div>
+        <div class="sidebar__step">
+          <div class="sidebar__step__number">4</div>
+          <div class="sidebar__step__text">Summary</div>
+        </div>
+      </div>
+    </div>
+    <div class="right-section">
+      <div class="right-section-container">
+        <div class="right-top">
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+
+          
+        </div>
+        <form action="none">  
+         <div class="form"> <label for="name">Name</label>
+          <input type="text"></div>
+          <div class="form">
+          <label for="email">Email Address</label>
+          <input type="email"></div>
+          <div class="form">
+          <label for="number">Phone Number</label>
+          <input type="number"></div>
+        </form>
+        <button>Next Step</button>
+      </div>
+
+    </div>
+  </main>
+</div>
+  
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Santosh Yadav</a>.
+  </div>
+</body>
+</html>
